@@ -94,10 +94,14 @@ html {
     padding: 1em 0;
     background-color: var(--primary);
     color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .navbar {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -113,10 +117,50 @@ html {
     cursor: pointer;
 }
 
+.cards {
+    padding: 6.5em 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 1em;
+}
+
 .card {
+    min-width: 270px;
     max-width: 320px;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 5px 5px 0px #00675B;
-    background: radial-gradient(77.35% 100.64% at 45.93% -10.68%, rgba(255, 255, 255, 0) 0%, #D8D8D8 100%), #F0F0F0;
+    background: rgb(240,240,240);
+    background: linear-gradient(135deg, rgba(245,245,245,1) 0%, rgba(203,203,203,1) 100%);
+}
+
+th, td {
+    padding: .25em;
+    overflow-wrap: normal;
+}
+
+.card__buttons {
+    width: 70%;
+    margin-left: auto;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__status {
+    width: 75%;
+}
+
+.card__delete {
+    width: 20%;
+    border: none;
+    background-color: var(--delete);
+    border-radius: 5px;
+    display: inline-grid;
+    place-items: center;
+    padding: .25em;
 }
