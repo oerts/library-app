@@ -4,11 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Library</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">letero</h1>
+            <p class="logo__info">Keep track of your library</p>
+        </div>
+            <nav class="navbar">
+                <button class="add-book" data-add-book><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#B9F6CA" width="48px" height="48px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></button>
+            </nav>
+    </header>
+
+    <main class="container main">
+        <div class="cards">
+            <div class="card">
+                <table class="card__info">
+                    <tr>
+                        <th class="card__header">Title:</th>
+                        <td class="card__text" data-card-title>Metamorphosis</td>
+                    </tr>
+                    <tr>
+                        <th class="card__header">Author:</th>
+                        <td class="card__text" data-card-author>Franz Kafka</td>
+                    </tr>
+                    <tr>
+                        <th class="card__header">Category:</th>
+                        <td class="card__text" data-card-category>Fiction</td>
+                    </tr>
+                </table>
+
+                <select name="status" id="status" class="card__status" data-card-status>
+                    <option value="want-to-read">Want to read</option>
+                    <option value="currently-reading">Currently reading</option>
+                    <option value="read">Read</option>
+                </select>
+
+                <button class="card__button" data-card-delete><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
