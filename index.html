@@ -25,5 +25,31 @@
         <div class="cards">
         </div>
     </main>
+
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2 class="modal__title">Add a new book</h2>
+                <span class="modal__close">&times;</span>
+            </div>
+            <div class="modal__form">
+                <form>
+                    <label for="book-title">Title:</label>
+                    <input class="book-title" type="text" placeholder="The Metamorphosis" name="book-title" id="book-title" required>
+                    <label for="book-author">Author:</label>
+                    <input class="book-author" type="text" placeholder="Franz Kafka" name="book-author" id="book-author" required>
+                    <label for="book-category">Category:</label>
+                    <input class="book-category" type="text" placeholder="Fiction" name="book-category" id="book-category" required>
+                    <select class="book__status" name="book-status" id="book-status">
+                        <option value="want-to-read">Want to read</option>
+                        <option value="reading">Reading</option>
+                        <option value="read">Read</option>
+                    </select>
+
+                    <button type="submit" class="modal__submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
