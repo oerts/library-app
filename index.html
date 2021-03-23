@@ -33,18 +33,20 @@
                 <span class="modal__close">&times;</span>
             </div>
             <div class="modal__form">
-                <form>
+                <form class="book-form">
                     <label for="book-title">Title:</label>
                     <input class="book-title" type="text" placeholder="The Metamorphosis" name="book-title" id="book-title" required>
                     <label for="book-author">Author:</label>
                     <input class="book-author" type="text" placeholder="Franz Kafka" name="book-author" id="book-author" required>
                     <label for="book-category">Category:</label>
                     <input class="book-category" type="text" placeholder="Fiction" name="book-category" id="book-category" required>
-                    <select class="book__status" name="book-status" id="book-status">
-                        <option value="want-to-read">Want to read</option>
-                        <option value="reading">Reading</option>
-                        <option value="read">Read</option>
-                    </select>
+                    <div class="modal__toggle">
+                        <p class="book__mark">Mark as read:</p>
+                        <label class="switch">
+                            <input type="checkbox" id="book-status" class="book__status" value="Want to read">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
 
                     <button type="submit" class="modal__submit">SUBMIT</button>
                 </form>
