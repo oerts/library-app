@@ -88,7 +88,6 @@ html {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;
-    margin: 0 auto;
 }
 
 .header {
@@ -121,13 +120,14 @@ html {
 }
 
 .cards {
-    padding: 6.5em 0;
+    padding: 7em 0;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-    grid-gap: 1em;
+    grid-auto-rows: 1fr;
+    grid-gap: 2em;
 }
 
 .card {
@@ -298,4 +298,36 @@ input:checked + .slider:before {
     font-size: 1.2rem;
     margin-top: 2em;
     cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .modal__content {
+        max-width: 370px;
+        max-height: 600px;
+        margin: 7em auto;
+    }
+
+    .header {
+        position: unset;
+        border: none;
+        padding-bottom: 0;
+    }
+
+    .navbar {
+        position: unset;
+        padding: .5em;
+        margin-top: 1em;
+    }
+
+    .container-bigscreen {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .cards {
+        padding: 2em 0;
+    }
 }
